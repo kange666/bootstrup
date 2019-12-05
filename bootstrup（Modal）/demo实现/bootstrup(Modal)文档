@@ -1,0 +1,99 @@
+一、准备：
+    1.jquery.js
+    2.如果想要单独引用该插件的功能，那么需要引用 modal.js。或者也可以引用 bootstrap.js 或压缩版的 bootstrap.min.js。
+
+二、模态框基本结构及各个属性注释：
+    见test.html
+
+三、常用参数、方法和事件:
+    1.设置背景方法：
+        a. 有背景，点击modal外部，modal消失。（默认）
+            #方法1：在div里添加参数 data-backdrop = true
+            #方法2：设置js方法
+             $('#myModal')modal({
+                 backdrop:true
+             });
+             #或者不做设置
+        b. 无背景，点击modal外部，modal不消失。
+            #方法1：在div里添加参数 data-backdrop = false
+            #方法2：设置js方法
+             $('#myModal')modal({
+                 backdrop:false
+             });
+        c. 有背景，点击modal外部，modal不消失。
+            #方法1：在div里添加参数 data-backdrop = "static"
+            #方法2：设置js方法
+             $('#myModal')modal({
+                   backdrop:"static"
+             });
+             注意：这里的static都为字符串类型，要加双引号
+
+    2.设置esc按键方法：
+        a.当按下 escape 键时关闭模态框（默认）
+            #方法1：在div里添加参数：data-keyboard="true"
+            #方法2：设置js方法
+                  $('#myModal8').modal({
+                      keyboard:true
+                  });
+            #或者不做设置
+        b.当按下 escape 键时不关闭模态框
+             #方法1：在div里添加参数：data-keyboard="false"
+             #方法2：设置js方法
+                  $('#myModal8').modal({
+                     keyboard:false
+                  });
+
+        3.设置显示方式：
+            a.模态框在初始化之后就立即显示出来
+                #方法1：设置js方法：
+                    $('#myModal6').modal({
+                       show:"true"
+                    });
+                #方法2：用自带的modal()方法设置js方法：
+                    $('#myModal6') .modal('show');
+            b.模态框在页面初始化之后就不显示
+                  #方法1：设置js方法：
+                    $('#myModal6').modal({
+                        show:"false"
+                    });
+                  #方法2：用自带的modal()方法设置js方法：
+                     $('#myModal6') .modal('hide');
+                  #或者不做设置
+            c.手动切换模态框： 如果modal已经显示，就隐藏掉，如果modal没有显示，就让他显示出来。
+                   #设置js：
+                      $('#myModal9').modal("toggle");
+
+        4.为模态框的主体注入内容
+            remote设置：
+                #方法1：在div中添加参数：data-remote="url"
+                        从此 URL 地址加载要展示的内容（只加载一次）并插入 .modal-content 内
+                #方法2：在按钮中加入参数：href="url"
+                        如果使用的是 data 属性 API，还可以利用 href 属性指定内容来源地址
+
+        5.事件设置：
+            a：在调用 show 方法后触发.(show.bs.modal)
+                $('#identifier').on('show.bs.modal', function () {
+                  // 执行一些动作...
+                })
+            b.当模态框对用户可见时触发.(shown.bs.modal)
+                $('#identifier').on('shown.bs.modal', function () {
+                  // 执行一些动作...
+                })
+            c.当调用 hide 实例方法时触发.(hide.bs.modal)
+                $('#identifier').on('shown.bs.modal', function () {
+                  // 执行一些动作...
+                })
+            d.当模态框完全对用户隐藏时触发.(hidden.bs.modal)
+                $('#identifier').on('shown.bs.modal', function () {
+                  // 执行一些动作...
+                })
+
+        6.模态框位置设置：
+            #方法：设置css属性或通过js设置：
+                position:fix;
+                top:
+                left:
+                例： $("#myModal15").css({
+                          position: "fix",
+                          top:"600px"
+                      })

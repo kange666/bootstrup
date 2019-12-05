@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loading</title>
+    <link rel="stylesheet" href="../com/bootstrap.css">
+    <script src="../com/jquery-1.12.4.js"></script>
+    <script src="../com/bootstrap.js"></script>
+</head>
+<body>
+<div>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">按钮</button>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+
+            <img alt="" src="1.gif"/>
+
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+<script type="text/javascript">
+    $("#myModal").modal({
+        keyboard: false,
+        show:false,
+        backdrop:"static"
+    }).css({
+        position:"fix",
+        top:"360px",
+        left:"300px"
+    })
+</script>
+</body>
+</html>

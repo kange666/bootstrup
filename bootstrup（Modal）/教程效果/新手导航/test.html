@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新手引导</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+<!--黑色半透明蒙版-->
+<div id="mask"></div>
+<div id="father">
+    <div class="c1"><a>下一步</a><span title="关闭">关闭</span></div>
+    <div class="c2"><a>下一步</a><span title="关闭">关闭</span></div>
+    <div class="c3"><a>下一步</a><span title="关闭">关闭</span></div>
+    <div class="c4"><a>下一步</a><span title="关闭">关闭</span></div>
+    <div class="c5"><a>下一步</a></div>
+</div>
+<div>
+    <button type="button" id="btn1" style="float:right;width:60px;height: 30px;margin: 10px 10px 0 0 ;border-radius: 2px">帮助</button>
+</div>
+<script>
+
+    $(function () {
+        //鼠标点击事件
+        $("#btn1").click(function () {
+            //防止中途关闭后再次点击会显示中途的div
+            $("#father div").hide();
+            //蒙版，父类块，第一个图片显示
+            $("#mask,#father,#father div:eq(0)").show();
+                //点击下一步
+            $("#father div a").click(function () {
+                //点击图片父类div隐藏，下一个显示
+                $(this).parent().hide().next().show();
+            });
+                //关闭或者最后一步时点击关闭所有div及蒙版显示
+            $("#father div a:last,#father div span").click(function () {
+               $("#mask,#father").hide();
+            });
+         });
+    })
+</script>
+</body>
+</html>

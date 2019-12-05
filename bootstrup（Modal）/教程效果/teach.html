@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教程效果</title>
+    <link rel="stylesheet" href="../com/bootstrap.css">
+    <script src="../com/jquery-1.12.4.js"></script>
+    <script src="../com/bootstrap.js"></script>
+</head>
+<body>
+<div>
+    <div>
+        <span style="font-size: 20px;line-height: 26px">默认模态框</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            点击
+        </button>
+    </div>
+    <!--步骤1-->
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        步骤1
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    步骤1内容
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModa2" id="btn1">
+                        下一步
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+        </div>
+        <!--步骤2-->
+        <div class="modal" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabe2">
+                            步骤2
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        步骤2内容
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            关闭
+                        </button>
+                        <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModa3" id="btn2">
+                            下一步
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+            </div>
+            <!--步骤3-->
+            <div class="modal" id="myModa3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabe3">
+                                步骤3
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            步骤3内容
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                关闭
+                            </button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                完成
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+    </div></div>
+<script type="text/javascript">
+
+   $("#btn1").click(function () {
+       $("#myModal").modal("hide");
+  });
+   $("#btn2").click(function () {
+       $("#myModa2").modal("hide");
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="../com/bootstrap.css">
+    <script src="../com/jquery-1.12.4.js"></script>
+    <script src="../com/bootstrap.js"></script>
+    <style>
+        .mod{
+            margin-top:20px;
+            line-height: 100%;
+            height:60px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="margin-bottom: 40px;">bootstrup(Modal)实例</h1>
+<!--默认模态框-->
+<div style="width: 100%;height: 100%;">
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">默认模态框</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            点击
+        </button>
+    </div>
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        模态框标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                        默认：无动画效果；模态框中等大小；有背景，点击modal外部，modal消失；模态框初始化之后就不显示出来；按下esc键后关闭模态框
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<!--模态框滑出-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">模态框滑出</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModa0">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModa0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabe0">
+                        模态框标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    模态框弹出时的动画效果（淡入淡出效果），增加 .fade 类即可
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<!--弹出大模态框-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">大模态框</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel1">
+                        模态框标题1
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    弹出大模态框
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<!--弹出小模态框-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">小模态框</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel2">
+                        模态框标题2
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    弹出小模态框
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<!--有背景，点击modal外部，modal消失-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">backdrop:true(默认)</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel3">
+                        模态框标题3
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    有背景，点击modal外部，modal消失（默认）
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    //    $('#myModal4').modal({
+    //        backdrop:true
+    //    });
+</script>
+<!--无背景，点击modal外部，modal不消失-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">backdrop:false</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal4">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-backdrop = false>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel4">
+                        模态框标题4
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    无背景，点击modal外部，modal不消失
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+//    $('#myModal4').modal({
+//        backdrop:false
+//    });
+</script>
+<!--有背景，点击modal外部，modal不消失-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">backdrop:"static"</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal5">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-backdrop = "static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel5">
+                        模态框标题5
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    有背景，点击modal外部，modal不消失
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    //    $('#myModal5').modal({
+    //        backdrop:"static"
+    //    });
+</script>
+<!--模态框初始化之后就立即显示出来-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">show:true(默认）</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal6">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel6">
+                       模态框标题6
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    模态框在页面初始化之后就立即显示出来
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+        $('#myModal6').modal({
+           show:"true"//false
+        });
+//        $('#myModal6') .modal('show');//手动打开模态框。在模态框显示之前返回到主调函数中 （也就是，在触发 shown.bs.modal 事件之前）。
+//        $('#myModal6').modal("hide");//手动隐藏模态框。在模态框隐藏之前返回到主调函数中 （也就是，在触发 hidden.bs.modal 事件之前）。
+</script>
+<!--remote属性设置-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">remote</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal7">
+            <!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal7" href="hellow.html">-->
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-remote="hellow.html">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<!--当按下 escape 键时关闭模态框，设置为 false 时则按键无效。-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">keyboard:false</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal8">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel8">
+                        模态框标题8
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    当按下 escape 键时不关闭模态框，设置为 false
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    //    $('#myModal8').modal({
+    //        keyboard:false
+    //    });
+</script>
+<!--手动切换模态框-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">toggle:true</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal9">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel9">
+                        模态框标题9
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    如果modal已经显示，就隐藏掉，如果modal没有显示，就让他显示出来。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+        $('#myModal9').modal("toggle");
+</script>
+<!--事件show.bs.modal-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">事件show.bs.modal</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal10">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel10">
+                        模态框标题10
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    Show方法调用之后立即触发该事件
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+        $('#myModal10').on('show.bs.modal', function () {
+            alert("在调用 show 方法后触发")
+        })
+</script>
+<!--事件shown.bs.modal-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">事件shown.bs.modal</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal11">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel11">
+                        模态框标题11
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    当模态框对用户可见时触发（将等待 CSS 过渡效果完成）。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    $('#myModal11').on('shown.bs.modal', function () {
+        alert("当模态框对用户可见时触发")
+    })
+</script>
+<!--事件hide.bs.modal-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">事件hide.bs.modal</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal12">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel12">
+                        模态框标题12
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    hide 方法调用之后立即触发该事件
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    $('#myModal12').on('hide.bs.modal', function () {
+        alert("当调用 hide 实例方法时触发。")
+    })
+</script>
+<!--事件hiden.bs.modal-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">事件hiden.bs.modal</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal13">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel13">
+                        模态框标题13
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    当模态框完全对用户隐藏时触发。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    $('#myModal13').on('hidden.bs.modal', function () {
+        alert("当模态框完全对用户隐藏时触发。")
+    })
+</script>
+<!--事件Loaded.bs.modal-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">事件Loaded.bs.modal</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal14">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel14">
+                        模态框标题14
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    从远端的数据源加载完数据之后触发该事件
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script type="text/javascript">
+    $('#myModal14').on('Loaded.bs.modal', function () {
+        alert("从远端的数据源加载完数据之后触发该事件。")
+    })
+</script>
+<!--模态框位置设置-->
+<div class="mod col-lg-3">
+    <div>
+        <span style="font-size: 20px;line-height: 26px">模态框位置设置</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal15">
+            点击
+        </button>
+    </div>
+    <div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel15">
+                        模态框标题14
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    位于页面下方
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<script>
+    $("#myModal15").css({
+        position: "fix",
+        top:"600px"
+    })
+</script>
+</div>
+</body>
+</html>
